@@ -25,3 +25,22 @@ print(vect.get_feature_names_out())
 simple_train_dtm = vect.transform(simple_train)
 print(simple_train_dtm)
 
+# turn vector I created into a matrix
+print(simple_train_dtm.toarray())
+
+# viewing vocabulary and document-term matrix together
+df = pd.DataFrame(simple_train_dtm.toarray(), columns=vect.get_feature_names_out())
+print('TRAIN DATAFRAME: ')
+print(df)
+
+# example text for model testing
+simple_test = ["please dont call me"]
+
+# transform testing data into a document-term metrix using existing vocabulary
+simple_test_dtm = vect.transform(simple_test)
+simple_test_dtm.toarray()
+
+test_df = pd.DataFrame(simple_test_dtm.toarray(), columns = vect.get_feature_names_out())
+
+print('TEST DATAFRAME: ')
+print(test_df)
