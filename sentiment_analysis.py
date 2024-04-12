@@ -49,3 +49,5 @@ def get_sentiment(text):
 
 # apply get_sentiment function
 df['sentiment'] = df['reviewText'].apply(get_sentiment)
+
+print(df)
