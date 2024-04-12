@@ -1,7 +1,7 @@
 import pandas as pd
 # nltk is a NLP library 
 
-import nltk 
+import nltk
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
@@ -43,7 +43,7 @@ analyzer = SentimentIntensityAnalyzer()
 
 # get_sentiment function
 def get_sentiment(text):
-    scores = analyzer.polatiry_scores(text)
+    scores = analyzer.polarity_scores(text)
     sentiment = 1 if scores['pos'] > 0 else 0
     return sentiment 
 
